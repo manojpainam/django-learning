@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block tile %}
+    <b>Details about {{student.fname}} {{lname}}</b>
+{% endblock %}
+
+{% block content %}
+    <h1> {{student.fname}} {{student.lname}} </h1>
+    <p>Phone : {{student.mobile}}</p>
+
+    <p><a href="/get_all_students">Back to students</a></p>
+{% endblock %}
