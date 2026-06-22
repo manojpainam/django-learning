@@ -26,6 +26,6 @@ staticfiles/
 # Pytest
 .pytest_cache/
 
-# Migrations (optional)
-# */migrations/*.py
-# !*/migrations/__init__.py
+Migrations (optional)
+*/migrations/*.py
+!*/migrations/__init__.py
