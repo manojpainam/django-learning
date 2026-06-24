@@ -15,3 +15,8 @@ def get_details(request, id):
     student = Student.objects.get(id=id)
     data = {"student" : student}
     return render(request, 'details.html', context = data)
+
+def testing(request):
+    fruits = ["Mango", "Banana", "Orange", "Kiwi"]
+    context = {"fruits" : fruits}
+    return render(request, 'testing.html', context)
