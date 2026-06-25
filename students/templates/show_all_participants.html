@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block header %}
+    <h1>All particpants</h1>
+{% endblock %}
+
+{% block style %}
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Mobile</th>
+        </tr>
+    {% for participant in participants %}
+        <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{participant.fname}}</td>
+            <td>{{participant.lname}}</td>
+            <td>{{participant.mobile}}</td>
+        </tr>
+    {% endfor %}
+    </table>
+
+    {% comment %}
+        <h1>This is the original content</h1>
+    {% endcomment %}
+
+{% endblock %}

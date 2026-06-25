@@ -20,3 +20,21 @@ def testing(request):
     fruits = ["Mango", "Banana", "Orange", "Kiwi"]
     context = {"fruits" : fruits}
     return render(request, 'testing.html', context)
+
+def greet_participant(request):
+    participant = Student.objects.all().values()[2]
+    print(participant)
+    fname = "Participant"
+    if participant:
+        fname = participant.get('fname', '')
+    context = {
+        "firstname" : fname
+    }
+    return render(request, 'greet_participant.html', context)
+
+def print_all_participants(request):
+    participants = Student.objects.all().values()
+    context = {
+        "participants" : participants
+    }
+    return render(request, 'show_all_participants.html', context)
