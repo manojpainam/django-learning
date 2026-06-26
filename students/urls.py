@@ -7,5 +7,6 @@ urlpatterns = [
     path('student/<int:id>', views.get_details, name="get_details"),
     path('testing/', views.testing, name="testing"),
     path('greet_participant/', views.greet_participant, name='greet_participant'),
-    path('all/', views.print_all_participants, name='print_all_participants')
+    path('all/', views.print_all_participants, name='print_all_participants'),
+    path('get_fristnames', views.get_firstnames, name='get_fristnames')
 ]

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block header %}
+    <h1>First Names</h1>
+{% endblock %}
+
+{% block content %}
+    <ul>
+        {% for firstname in firstnames %}
+            <li>{{firstname}}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

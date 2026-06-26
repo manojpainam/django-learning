@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from .models import Student
 
 
@@ -38,3 +38,15 @@ def print_all_participants(request):
         "participants" : participants
     }
     return render(request, 'show_all_participants.html', context)
+
+'''
+Get all users firstname
+'''
+def get_firstnames(request):
+    students_fnames = Student.objects.values_list("fname", flat=True)
+
+    context = {
+        "firstnames": students_fnames
+    }
+
+    return render(request, "get_firstnames.html", context)
